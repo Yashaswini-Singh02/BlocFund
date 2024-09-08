@@ -23,10 +23,10 @@ const config = {
       },
       colors: {
         indigo: "#8589FF",
-        "dark-blue": "#000230",
+        "dark-blue": "#161D6F",
         "navy-blue": "#000366",
         purple: "#6145E9",
-        mauve: "#C5AEF2",
+        mauve: "#EBD3F8",
         violet: "#31248D",
         "pale-white": "#F9F8FF",
         beige: "#FFF6C2",

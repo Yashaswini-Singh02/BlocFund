@@ -11,9 +11,9 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.25, duration: 1 }}
-          className=" text-7xl max-w-5xl tracking-wide text-pale-white font-bold"
+          className="text-4xl text-white font-semibold tracking-widest max-w-3xl text-center"
         >
-          Lorem ipsum dolor sit amet
+          Trust. Transparency. Impact.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, x: -100 }}
@@ -21,9 +21,8 @@ export const Hero: React.FC = () => {
           transition={{ delay: 0.25, duration: 1 }}
           className="text-xl text-beige font-semibold tracking-widest max-w-3xl text-center"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod
+          Empowering transparent, secure fundraising with verifiable
+          contributions across multiple blockchains.
         </motion.p>
         <Link href={"/dashboard"}>
           <motion.button
@@ -42,12 +41,12 @@ export const Hero: React.FC = () => {
         </Link>
       </div>
 
-      <button className="absolute bottom-0 left-0 right-0 mx-auto mb-12">
+      {/* <button className="absolute bottom-0 left-0 right-0 mx-auto mb-12">
         Create
-      </button>
+      </button> */}
 
       <Image
-        className="animate-fade-in-bounce rounded-2xl mx-auto"
+        className="animate-fade-in-bounce rounded-2xl mx-auto mt-10"
         src={"/assets/landing/hero.svg"}
         alt="investing"
         width={500}
