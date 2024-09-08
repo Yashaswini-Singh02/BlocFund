@@ -92,26 +92,27 @@ export const updateTotalFunds = async (req: Request, res: Response) => {
   const { campaignId, amount, action, contributor_address } = req.body;
 
   try {
-    const update = action === "contribute"
-      ? {
-          $inc: { totalFunds: amount },
-          $push: {
-            contributors: {
-              address: contributor_address,
-              amount: amount,
+    const update =
+      action === "contribute"
+        ? {
+            $inc: { totalFunds: amount },
+            $push: {
+              contributors: {
+                address: contributor_address,
+                amount: amount,
+              },
             },
-          },
-        }
-      : action === "refund"
-      ? {
-          $inc: { totalFunds: -amount },
-          $pull: {
-            contributors: {
-              address: contributor_address,
+          }
+        : action === "refund"
+        ? {
+            $inc: { totalFunds: -amount },
+            $pull: {
+              contributors: {
+                address: contributor_address,
+              },
             },
-          },
-        }
-      : null;
+          }
+        : null;
 
     if (!update) {
       return res.status(400).json({ error: "Invalid action specified" });

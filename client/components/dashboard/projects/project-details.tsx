@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { Progress } from "@/components/ui/progress";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -12,6 +11,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { trimAddress } from "@/utils/functions/trim-address";
 import { useToast } from "@/components/ui/use-toast";
 import { Copy } from "lucide-react";
+import SignClient from "@/utils/service/signService";
 
 export const ProjectDetails: React.FC = () => {
   const [campaign, setCampaign] = useState<any>({});
@@ -88,7 +88,7 @@ export const ProjectDetails: React.FC = () => {
                       className=""
                     />
                     <p className="text-md text-right mt-2">
-                      {campaign.totalFunds} CELO raised of {campaign.goal} CELO
+                      {campaign.totalFunds} ETH raised of {campaign.goal} ETH
                     </p>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ export const ProjectDetails: React.FC = () => {
                             </p>
                           </div>
                         </div>
-                        <p className="text-lg">{contributor.amount} CELO</p>
+                        <p className="text-lg">{contributor.amount} ETH</p>
                       </div>
                     ))}
                   </>

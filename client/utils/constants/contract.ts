@@ -323,8 +323,5 @@ export class FundingContract {
       type: "function",
     },
   ];
-  public static readonly ADDRESS = "0xeff531D43600A925c0D282f755bA0d39AA82EF14";
-  public static readonly ALFAJORES_ADDRESS = "0x79A24817Ac317549A2d1e00109f0FA7424E45838";
+  public static readonly ADDRESS = "0x3E058aAD8a3AAf40d1231688bb5F456EDBCF5F8c";
 }
-
-

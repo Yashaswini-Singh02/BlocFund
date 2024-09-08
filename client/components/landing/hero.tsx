@@ -42,6 +42,10 @@ export const Hero: React.FC = () => {
         </Link>
       </div>
 
+      <button className="absolute bottom-0 left-0 right-0 mx-auto mb-12">
+        Create
+      </button>
+
       <Image
         className="animate-fade-in-bounce rounded-2xl mx-auto"
         src={"/assets/landing/hero.svg"}

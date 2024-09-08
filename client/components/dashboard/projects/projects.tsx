@@ -2,7 +2,6 @@
 
 import {
   Card,
-  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
@@ -103,7 +102,9 @@ export const Projects: React.FC = () => {
                     </DrawerHeader>
                     <DrawerFooter className="w-max text-lg">
                       <div className="w-full flex gap-x-12 items-center">
-                        <Link href={`/dashboard/project?campaignId=${campaignId}`}>
+                        <Link
+                          href={`/dashboard/project?campaignId=${campaignId}`}
+                        >
                           <button className="flex items-center gap-x-2 text-white bg-navy-blue px-10 py-2 rounded-md">
                             Visit Project
                             <RightSmallUp theme="outline" size="24" />
@@ -112,8 +113,7 @@ export const Projects: React.FC = () => {
 
                         <DrawerClose>
                           <button className="text-violet flex items-center gap-x-2 border-violet border-2 px-10 py-2 rounded-md">
-                            Cancel{" "}
-                            <XIcon  size="20" />
+                            Cancel <XIcon size="20" />
                           </button>
                         </DrawerClose>
                       </div>
